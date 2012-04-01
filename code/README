@@ -1,0 +1,44 @@
+Programme
+=========
+
+Blinken
+-------
+p01.bas Blinkende LED an Pin 0
+p01.cad wie p01.bas
+
+p02.bas 15x Blinken an Pin 0
+p02.cad wie p02.bas
+
+p02a.bas  wie p02.bas mit Symbols
+
+Töne
+----
+p03.bas Vier Töne
+p04.bas Töne von 1 .. 120
+p05.bas Töne von 120 .. 1
+p06.bas Spiele ("play") Happy Birthday
+
+Eingänge
+--------
+p07.bas Debug eines Analogwertes an Pin 1
+p09.bas LED 0 an wenn LDR hell
+p09a.bas  Nachtlicht: LED an wenn LDR dunkel 
+  - loop, if..then..else..endif, symbol
+ 
+p10.bas LDR an Pin 1. LED aus wenn > 80
+  Feedback-Loop => Blinken
+p10.cad LDR an pin 1. 2 LEDs bei >100, >50 
+p10a.cad  wie p10.bas
+p11.bas Weiches an/aus von LED 0
+p11a.bas  2 LEDs weich an/aus
+p11b.bas  2 LEDs weich an/aus MEINS
+p12.bas Geräusche, Steuerbar mit LDR und Taster
+
+hd01.bas  Einfacher heißer Draht: pin1 => LED0
+hd02.bas  Zähler und serielle Ausgabe 
+hd03.bas  Zähler und Zeit. Ausgabe seriell
+hd03a.bas Zeitmessung mit time des 08m2
+hd04.bas  wie hd03.bas mit Überlauf
+hd05.bas  Berührung per Interrupt, Töne, Tickzähler
+hd06.bas  Berührung per Multitasking
+
