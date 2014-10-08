@@ -1,9 +1,12 @@
-; hd05
-; Heisser Draht 05
+ï»¿; hd06
+; Heisser Draht 06
+
+#no_data
+
 ; 
-; Berührungen per Interrupt
-; Ton am Anfang, Ende und bei Berührung
-; Taster für Start und Ende
+; BerÃ¼hrungen per Interrupt
+; Ton am Anfang, Ende und bei BerÃ¼hrung
+; Taster fÃ¼r Start und Ende
 ; Punkte blinken am Ende
 ; 
 symbol zaehler = b0	' Variablenname zur besseren Lesbarkeit
@@ -23,7 +26,7 @@ do
 	started = 0
 
 	pause 200
-	sertxd ("hd05 - Taste druecken", lf)
+	sertxd ("hd06 - Taste druecken", cr, lf)
 	
 	' Warte auf START
 	do
@@ -48,13 +51,13 @@ do
 			zeit = zeit - 1
 			high 4
 			gosub soundup
-			;; sertxd (#zeit, " / ", #zaehler, lf)
+			;; sertxd (#zeit, " / ", #zaehler, cr, lf)
 			if zeit = 0 then
 				goto ende
 			endif
 		endif
 
-	' Ende, wenn Taster gedrückt
+	' Ende, wenn Taster gedrÃ¼ckt
 	loop until taster is on
 
 ende:
@@ -69,12 +72,12 @@ ende:
 	punkte = 1000 - punkte
 	punkte = punkte + zeit
 
-	' Überlauf
+	' Ãœberlauf
 	if punkte > 1000 then
 		punkte = 0
 	endif
 
-	sertxd ("Punkte: ", #punkte, ", Zeit: ", #zeit, ", Beruehrungen; ", #zaehler, lf)
+	sertxd ("Punkte: ", #punkte, ", Zeit: ", #zeit, ", Beruehrungen; ", #zaehler, cr, lf)
 
 	for ticks = punkte to 1000 step 10
 		high 4

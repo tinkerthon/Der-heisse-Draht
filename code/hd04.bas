@@ -9,17 +9,17 @@ zeit = 0
 do
 	zeit = zeit + 1
 	if pin1 is on then
-				' Dauert Berührung länger als 0,2s,
-				' wird sie mehrfach gezählt
+				' Dauert BerÃ¼hrung lÃ¤nger als 0,2s,
+				' wird sie mehrfach gezÃ¤hlt
 		zaehler = zaehler + 1
-				' Ausgabe des Zählers
+				' Ausgabe des ZÃ¤hlers
 		high 0
 	endif
 
 	pause 200	' LED blinkt kurz
 	low 0
 
-' Ende, wenn Taster gedrückt
+' Ende, wenn Taster gedrÃ¼ckt
 loop until pin3 is on
 
 
@@ -28,7 +28,7 @@ punkte = zaehler * 10
 punkte = 1000 - punkte
 punkte = punkte - zeit
 
-' Überlauf
+' Ãœberlauf
 if punkte > 1000 then
 	punkte = 0
 endif

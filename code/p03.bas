@@ -1,5 +1,5 @@
 ; p03
-; Vier Töne
+; Vier TÃ¶ne
 
 main:	sound 2, (65, 100)
 	sound 2, (78, 100)

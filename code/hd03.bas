@@ -1,5 +1,8 @@
 ; hd03
 ; Heisser Draht 04
+
+#no_data
+
 symbol zaehler = b0	' Variablenname zur besseren Lesbarkeit
 symbol zeit = b1
 symbol punkte = w2
@@ -9,17 +12,17 @@ zeit = 0
 do
 	zeit = zeit + 1
 	if pin1 is on then
-				' Dauert Berührung länger als 0,2s,
-				' wird sie mehrfach gezählt
+				' Dauert BerÃ¼hrung lÃ¤nger als 0,2s,
+				' wird sie mehrfach gezÃ¤hlt
 		zaehler = zaehler + 1
-				' Ausgabe des Zählers
+				' Ausgabe des ZÃ¤hlers
 		high 0
 	endif
 
 	pause 200	' LED blinkt kurz
 	low 0
 
-' Ende, wenn Taster gedrückt
+' Ende, wenn Taster gedrÃ¼ckt
 loop until pin3 is on
 
 

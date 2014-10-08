@@ -2,7 +2,7 @@
 ; Ein LDR an Pin 1
 
 ; Warum blinkt die LED, wenn man
-; den Lichtfühler auf die LED richtet?
+; den LichtfÃ¼hler auf die LED richtet?
 
 do
 	readadc 1, b1

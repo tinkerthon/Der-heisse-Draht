@@ -1,6 +1,8 @@
 ; Heisser Draht 03a
 ; Messen der Zeit mit der "time"-Variable des 08M2
 
+#no_data
+
 #picaxe 08m2
 #no_data
 

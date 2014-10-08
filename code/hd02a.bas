@@ -1,13 +1,14 @@
-; hd02
+; hd02a
 ; Heisser Draht 02
-
-#no_data
-
 symbol zaehler = b0	' Variablenname zur besseren Lesbarkeit
 zaehler = 0
 
 do
-	if pin1 is on then
+    if pin3 = 1 then
+	    zaehler = 0
+	endif
+
+	if pin1 = 1 then
 				' Dauert Berührung länger als 0,2s,
 				' wird sie mehrfach gezählt
 		zaehler = zaehler + 1
